@@ -1,0 +1,4 @@
+0. add weight to create form: drop-down
+1. change colour if asked (not null)
+2. order by asked then weight
+3. don't show ID on create (add other forms on view/edit)

@@ -1,21 +1,16 @@
 // Models
 window.Wine = Backbone.Model.extend({
-    urlRoot:"../api/wines",
+    urlRoot:"../api/wines", // where is this actually used?
     defaults:{
         "id":null,
-        "name":"",
-        "grapes":"",
-        "country":"USA",
-        "region":"California",
-        "year":"",
-        "description":"",
-        "picture":""
+        "question":"What's your favourite...",
+        "asked":"", // required as set by the CMS?
     }
 });
 
 window.WineCollection = Backbone.Collection.extend({
     model:Wine,
-    url:"../api/wines"
+    url:"../api_favouriteQ/questions" // matches backend, first webservice call
 });
 
 
