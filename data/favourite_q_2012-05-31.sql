@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.9-log)
 # Database: favourite_q
-# Generation Time: 2012-05-31 21:05:25 +0000
+# Generation Time: 2012-05-31 21:08:31 +0000
 # ************************************************************
 
 
@@ -29,8 +29,8 @@ CREATE TABLE `questions` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `question` varchar(140) DEFAULT NULL,
   `asked` timestamp NULL DEFAULT NULL,
-  `created_on` timestamp NULL DEFAULT NULL,
-  `updated_on` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
   `weight` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -38,7 +38,7 @@ CREATE TABLE `questions` (
 LOCK TABLES `questions` WRITE;
 /*!40000 ALTER TABLE `questions` DISABLE KEYS */;
 
-INSERT INTO `questions` (`id`, `question`, `asked`, `created_on`, `updated_on`, `weight`)
+INSERT INTO `questions` (`id`, `question`, `asked`, `created_at`, `updated_at`, `weight`)
 VALUES
 	(1,'What\'s your favourite cheese?',NULL,'2012-05-31 21:00:11','2012-05-31 21:00:14',0),
 	(2,'What\'s your favourite animal?','2012-05-31 21:02:18','2012-05-31 21:00:55','2012-05-31 21:01:04',1),

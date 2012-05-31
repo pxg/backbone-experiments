@@ -48,7 +48,7 @@ function addQuestion() {
 	error_log('addQuestion\n', 3, '/var/tmp/php.log');
 	$request = Slim::getInstance()->request();
 	$data = json_decode($request->getBody());
-	$sql = "INSERT INTO questions (question) VALUES (:question)";
+	$sql = "INSERT INTO questions (question, created_at, updated_at) VALUES (:question, NOW(), NOW())";
 	try {
 		$db = getConnection();
 		$stmt = $db->prepare($sql);  

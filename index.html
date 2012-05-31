@@ -34,8 +34,14 @@ Select a question the left to get started based on <a href="http://coenraets.org
     <div class="form-left-col">
         <label>Id:</label>
         <input type="text" id="wineId" name="id" value="<%= id %>" disabled />
+        
         <label>Name:</label>
         <input type="text" id="question" name="question" value="<%= question %>" required/>
+
+        <label>Weight:</label>
+        <input type="text" id="weight" name="weight" value="<%= weight %>" required/>
+        <p>Asked on: <%= asked %></p>
+
         <button class="save">Save</button>
         <button class="delete">Delete</button>
     </div>

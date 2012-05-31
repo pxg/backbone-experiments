@@ -5,6 +5,8 @@ window.Wine = Backbone.Model.extend({
         "id":null,
         "question":"What's your favourite...",
         "asked":"", //TODO: add other system fields but hide on save form. Lock on edit form
+        "weight":0,
+        "asked":"",
     }
 });
 
