@@ -1,3 +1,4 @@
+-1. set now on creation of question
 0. add weight to create form: drop-down
 1. change colour if asked (not null)
 2. order by asked then weight

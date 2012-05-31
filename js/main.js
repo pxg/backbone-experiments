@@ -1,16 +1,16 @@
 // Models
 window.Wine = Backbone.Model.extend({
-    urlRoot:"../api/wines", // where is this actually used?
+    urlRoot:"../api/wines", //RESEARCH: where is this actually used?
     defaults:{
         "id":null,
         "question":"What's your favourite...",
-        "asked":"", // required as set by the CMS?
+        "asked":"", //TODO: add other system fields but hide on save form. Lock on edit form
     }
 });
 
 window.WineCollection = Backbone.Collection.extend({
     model:Wine,
-    url:"../api_favouriteQ/questions" // matches backend, first webservice call
+    url:"../api_favouriteQ/questions" // URL for backend initial webservice call
 });
 
 
@@ -87,12 +87,14 @@ window.WineView = Backbone.View.extend({
 
     saveWine:function () {
         this.model.set({
-            name:$('#name').val(),
+            question:$('#question').val()
+            /*
             grapes:$('#grapes').val(),
             country:$('#country').val(),
             region:$('#region').val(),
             year:$('#year').val(),
             description:$('#description').val()
+            */
         });
         if (this.model.isNew()) {
             var self = this;
