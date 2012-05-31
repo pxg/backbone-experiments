@@ -14,7 +14,7 @@ $app->delete('/questions/:id',	'deleteQuestion');
 $app->run();
 
 function getQuestions() {
-	$sql = "select * FROM questions ORDER BY id";
+	$sql = "SELECT * FROM questions ORDER BY asked DESC, weight DESC";
 	try {
 		$db = getConnection();
 		$stmt = $db->query($sql);  
@@ -68,11 +68,12 @@ function updateQuestion($id) {
 	$request = Slim::getInstance()->request();
 	$body = $request->getBody();
 	$data = json_decode($body);
-	$sql = "UPDATE questions SET question=:question WHERE id=:id";
+	$sql = "UPDATE questions SET question=:question, weight=:weight WHERE id=:id";
 	try {
 		$db = getConnection();
 		$stmt = $db->prepare($sql);  
 		$stmt->bindParam("question", $data->question);
+		$stmt->bindParam("weight", $data->weight);
 		$stmt->bindParam("id", $id);
 		$stmt->execute();
 		$db = null;

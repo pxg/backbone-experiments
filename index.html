@@ -26,7 +26,7 @@ Select a question the left to get started based on <a href="http://coenraets.org
 </script>
 
 <script type="text/template" id="tpl-wine-list-item">
-	<a href='#wines/<%= id %>'><%= question %></a>
+	<a class="<%= asked ? 'asked' : 'not-asked' %>" href='#wines/<%= id %>'><%= question %></a>
 </script>
 
 <script type="text/template" id="tpl-wine-details">
@@ -39,7 +39,14 @@ Select a question the left to get started based on <a href="http://coenraets.org
         <input type="text" id="question" name="question" value="<%= question %>" required/>
 
         <label>Weight:</label>
-        <input type="text" id="weight" name="weight" value="<%= weight %>" required/>
+        <!--<input type="text" id="weight" name="weight" value="<%= weight %>" required/>-->
+        <select id="weight">
+            <option <%= weight==0 ? 'selected' : '' %> value="0">0</option>
+            <option <%= weight==1 ? 'selected' : '' %> value="1">1</option>
+            <option <%= weight==2 ? 'selected' : '' %> value="2">2</option>
+            <option <%= weight==3 ? 'selected' : '' %> value="3">3</option>
+        </select>
+
         <p>Asked on: <%= asked %></p>
 
         <button class="save">Save</button>

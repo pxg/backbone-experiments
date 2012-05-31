@@ -69,6 +69,7 @@ window.WineView = Backbone.View.extend({
 
     render:function (eventName) {
         $(this.el).html(this.template(this.model.toJSON()));
+        //console.log('rendering form? ' + this.model.weight);
         return this;
     },
 
@@ -89,7 +90,8 @@ window.WineView = Backbone.View.extend({
 
     saveWine:function () {
         this.model.set({
-            question:$('#question').val()
+            question:$('#question').val(),
+            weight:$('#weight').val(),
             /*
             grapes:$('#grapes').val(),
             country:$('#country').val(),
