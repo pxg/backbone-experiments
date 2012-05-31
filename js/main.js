@@ -10,7 +10,7 @@ window.Wine = Backbone.Model.extend({
 
 window.WineCollection = Backbone.Collection.extend({
     model:Wine,
-    url:"../api_favouriteQ/questions" // URL for backend initial webservice call
+    url:"api/questions" // URL for backend initial webservice call
 });
 
 
