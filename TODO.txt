@@ -1,5 +1,24 @@
+VERSION 0.1
+
 -1. set now on creation of question
 0. add weight to create form: drop-down
-1. change colour if asked (not null)
-2. order by asked then weight
-3. don't show ID on create (add other forms on view/edit)
+1. order by asked then weight
+2. change colour if asked (not null)
+3. don't show ID on create (add other forms on view/edit, how to togglet?)
+
+VERSION 0.2
+
+1. add answers for question in right hand column (return with seperate webservice call?)
+
+
+VERSION 0.3
+
+1. allow questions to be draggable for weights
+
+VERSION 0.4
+
+1. Password protect
+
+VERSION 0.5
+
+1. Rewrite in Node
